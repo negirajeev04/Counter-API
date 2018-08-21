@@ -49,9 +49,9 @@ public class CounterUtil {
 		}
 	}
 	
-	public static int countStringInFile(String stringToLookFor){
+	public static int getStringCount(String searchString){
 		
-		Integer countOfOccur = wordsCountMap.get(stringToLookFor.toLowerCase());
+		Integer countOfOccur = wordsCountMap.get(searchString.toLowerCase());
 		if(countOfOccur == null) {
 			return 0;
 		}

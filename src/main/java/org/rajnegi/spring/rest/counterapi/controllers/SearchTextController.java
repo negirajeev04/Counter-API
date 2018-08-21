@@ -22,7 +22,7 @@ public class SearchTextController {
 	public ResponseEntity<List<SearchText>> getCountPost(@RequestBody List<SearchText> searchReq) {
 
 		for (SearchText text : searchReq) {
-			int countStringInFile = CounterUtil.countStringInFile(text.getSearchString());
+			int countStringInFile = CounterUtil.getStringCount(text.getSearchString());
 			text.setCount(countStringInFile);
 		}
 
